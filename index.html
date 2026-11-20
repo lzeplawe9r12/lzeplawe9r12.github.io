@@ -1,0 +1,1644 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>女王的视频vk - 官方品牌门户 | 真实影像与创作现场</title>
+<meta name="description" content="女王的视频vk官方网站，一个专注人物影像与幕后创作的视频品牌平台，呈现真实、温暖、有力量的原创内容与创作者社区。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2316141b'/%3E%3Cpath d='M35 28 L78 50 L35 72 Z' fill='%23b98cff'/%3E%3Ccircle cx='22' cy='22' r='7' fill='%23ff5fa2'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --vk-ink:#16141b;
+    --vk-ink-2:#211e29;
+    --vk-ink-3:#2c2837;
+    --vk-line:rgba(255,255,255,.1);
+    --vk-line-2:rgba(255,255,255,.18);
+    --vk-text:#ece9f4;
+    --vk-muted:#a49db6;
+    --vk-neon:#b98cff;
+    --vk-neon-deep:#8a5cf6;
+    --vk-pink:#ff5fa2;
+    --vk-mint:#5ce0c6;
+    --vk-amber:#ffb84d;
+    --vk-radius:18px;
+    --vk-shadow:0 18px 46px rgba(0,0,0,.45);
+    --vk-max:1200px;
+    --vk-stick:112px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:var(--vk-stick)}
+  body{
+    background:
+      radial-gradient(1100px 520px at 82% -8%, rgba(138,92,246,.22), transparent 62%),
+      radial-gradient(900px 480px at 6% 12%, rgba(255,95,162,.12), transparent 60%),
+      var(--vk-ink);
+    color:var(--vk-text);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+  ::selection{background:var(--vk-neon);color:#15121c}
+
+  .vk-wrap{width:100%;max-width:var(--vk-max);margin:0 auto;padding:0 22px}
+
+  /* ============ 吸顶公告 + 页头 ============ */
+  .vk-stickbar{
+    position:sticky;top:0;z-index:80;
+    backdrop-filter:blur(18px);
+    background:linear-gradient(180deg,rgba(16,14,22,.96),rgba(16,14,22,.9));
+    border-bottom:1px solid var(--vk-line);
+  }
+  .vk-notice{
+    display:flex;align-items:center;gap:12px;
+    padding:9px 22px;
+    font-size:13px;color:#d9d3ec;
+    background:linear-gradient(90deg,rgba(138,92,246,.28),rgba(255,95,162,.16) 52%,rgba(92,224,198,.14));
+    border-bottom:1px solid var(--vk-line);
+    overflow:hidden;
+  }
+  .vk-notice__tag{
+    flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;
+    padding:2px 10px;border-radius:999px;
+    background:var(--vk-neon);color:#16121c;
+    font-size:11px;font-weight:800;letter-spacing:.06em;
+  }
+  .vk-notice__roll{flex:1 1 auto;min-width:0;position:relative;height:22px;overflow:hidden}
+  .vk-notice__item{
+    position:absolute;inset:0;display:flex;align-items:center;gap:8px;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    opacity:0;transform:translateY(10px);transition:opacity .5s ease,transform .5s ease;
+  }
+  .vk-notice__item.is-on{opacity:1;transform:translateY(0)}
+  .vk-notice__item b{color:var(--vk-mint);font-weight:700}
+  .vk-notice__time{color:var(--vk-muted);font-variant-numeric:tabular-nums}
+
+  .vk-header{display:flex;align-items:center;gap:16px;padding:14px 22px;max-width:var(--vk-max);margin:0 auto}
+  .vk-brand{display:flex;align-items:center;gap:11px;flex:0 0 auto}
+  .vk-brand__mark{
+    width:42px;height:42px;border-radius:13px;flex:0 0 auto;
+    background:conic-gradient(from 210deg,var(--vk-neon-deep),var(--vk-pink),var(--vk-mint),var(--vk-neon-deep));
+    display:grid;place-items:center;position:relative;
+  }
+  .vk-brand__mark::after{
+    content:"";width:0;height:0;
+    border-left:11px solid #16121c;border-top:7px solid transparent;border-bottom:7px solid transparent;
+    margin-left:3px;
+  }
+  .vk-brand__name{font-size:18px;font-weight:800;letter-spacing:.02em;line-height:1.25}
+  .vk-brand__name small{display:block;font-size:10.5px;font-weight:500;color:var(--vk-muted);letter-spacing:.18em}
+
+  .vk-nav{display:flex;align-items:center;gap:4px;margin-left:auto;flex-wrap:wrap}
+  .vk-nav a{
+    padding:8px 13px;border-radius:999px;font-size:14px;color:#cfc9de;
+    transition:background .2s,color .2s;
+  }
+  .vk-nav a:hover,.vk-nav a.is-active{background:rgba(185,140,255,.16);color:#fff}
+  .vk-burger{display:none;margin-left:auto;width:42px;height:42px;border-radius:12px;border:1px solid var(--vk-line-2);align-items:center;justify-content:center;flex-direction:column;gap:5px}
+  .vk-burger span{width:18px;height:2px;background:var(--vk-text);border-radius:2px;transition:.25s}
+  .vk-burger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .vk-burger.is-open span:nth-child(2){opacity:0}
+  .vk-burger.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .vk-mobilenav{display:none;padding:6px 22px 18px;border-bottom:1px solid var(--vk-line);background:rgba(16,14,22,.98)}
+  .vk-mobilenav.is-open{display:block}
+  .vk-mobilenav a{display:block;padding:11px 6px;border-bottom:1px dashed var(--vk-line);font-size:15px;color:#d6d0e6}
+  .vk-mobilenav a:last-child{border-bottom:none}
+
+  .vk-search{display:flex;align-items:center;gap:8px;background:var(--vk-ink-3);border:1px solid var(--vk-line);border-radius:999px;padding:6px 6px 6px 16px;flex:0 0 auto}
+  .vk-search input{background:none;border:none;outline:none;color:var(--vk-text);width:150px;font-size:13.5px}
+  .vk-search input::placeholder{color:#7f7994}
+  .vk-search button{
+    width:32px;height:32px;border-radius:999px;background:var(--vk-neon);color:#16121c;
+    display:grid;place-items:center;font-size:14px;font-weight:800;transition:filter .2s;
+  }
+  .vk-search button:hover{filter:brightness(1.12)}
+
+  /* ============ 通用区块 ============ */
+  .vk-section{padding:74px 0;position:relative}
+  .vk-section--tight{padding:54px 0}
+  .vk-sechead{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+  .vk-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:11.5px;font-weight:800;letter-spacing:.2em;color:var(--vk-neon);
+    text-transform:uppercase;margin-bottom:12px;
+  }
+  .vk-eyebrow::before{content:"";width:22px;height:2px;background:linear-gradient(90deg,var(--vk-neon),var(--vk-pink));border-radius:2px}
+  .vk-h2{font-size:clamp(24px,3.4vw,36px);line-height:1.25;font-weight:800;letter-spacing:-.01em}
+  .vk-h2 em{font-style:normal;color:var(--vk-neon)}
+  .vk-sub{color:var(--vk-muted);font-size:14.5px;max-width:640px;margin-top:12px}
+  .vk-linkmore{font-size:13.5px;color:var(--vk-mint);font-weight:700;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+  .vk-linkmore:hover{gap:10px}
+  .vk-linkmore::after{content:"→";transition:transform .2s}
+
+  .vk-btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:12px 24px;border-radius:999px;font-size:14px;font-weight:700;
+    border:1px solid var(--vk-line-2);color:var(--vk-text);transition:.2s;
+  }
+  .vk-btn:hover{background:rgba(255,255,255,.07);transform:translateY(-1px)}
+  .vk-btn--primary{background:linear-gradient(120deg,var(--vk-neon),var(--vk-pink));color:#141020;border-color:transparent;box-shadow:0 12px 30px rgba(185,140,255,.3)}
+  .vk-btn--primary:hover{filter:brightness(1.06);background:linear-gradient(120deg,var(--vk-neon),var(--vk-pink))}
+  .vk-btn--ghost{background:rgba(255,255,255,.04)}
+
+  .vk-chip{
+    display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;
+    font-size:12px;font-weight:600;color:#d8d2ea;background:rgba(185,140,255,.13);
+    border:1px solid rgba(185,140,255,.24);
+  }
+  .vk-chip--mint{color:#bff5ea;background:rgba(92,224,198,.12);border-color:rgba(92,224,198,.28)}
+  .vk-chip--pink{color:#ffd4e6;background:rgba(255,95,162,.13);border-color:rgba(255,95,162,.28)}
+  .vk-chip--amber{color:#ffe2b4;background:rgba(255,184,77,.12);border-color:rgba(255,184,77,.28)}
+
+  /* ============ 首屏 ============ */
+  .vk-hero{padding:52px 0 20px;position:relative;overflow:hidden}
+  .vk-hero::before{
+    content:"";position:absolute;width:560px;height:560px;right:-160px;top:-140px;border-radius:50%;
+    background:radial-gradient(circle,rgba(185,140,255,.3),transparent 66%);filter:blur(20px);pointer-events:none;
+  }
+  .vk-hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative}
+  .vk-hero__flags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+  .vk-flag{font-size:12px;font-weight:700;letter-spacing:.04em;padding:5px 12px;border-radius:999px;border:1px solid var(--vk-line-2);color:#cfc8e2;background:rgba(255,255,255,.035)}
+  .vk-flag b{color:var(--vk-mint)}
+  .vk-hero h1{font-size:clamp(38px,5.6vw,64px);line-height:1.08;font-weight:900;letter-spacing:-.02em;margin-bottom:8px}
+  .vk-hero h1 span{
+    background:linear-gradient(100deg,var(--vk-neon) 10%,var(--vk-pink) 52%,var(--vk-mint));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .vk-hero__slogan{font-size:clamp(17px,2.1vw,21px);font-weight:700;color:#e5dff2;margin:14px 0 18px;line-height:1.55}
+  .vk-hero__slogan em{font-style:normal;color:var(--vk-amber)}
+  .vk-hero__intro{color:#b7b0c9;font-size:15px;max-width:560px}
+  .vk-hero__intro strong{color:#fff;font-weight:700}
+  .vk-hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .vk-hero__stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px;max-width:520px}
+  .vk-stat{
+    padding:14px 16px;border-radius:14px;border:1px solid var(--vk-line);
+    background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.012));
+  }
+  .vk-stat b{display:block;font-size:23px;font-weight:900;letter-spacing:-.02em;color:#fff}
+  .vk-stat b i{font-style:normal;font-size:13px;color:var(--vk-neon);margin-left:2px}
+  .vk-stat span{font-size:11.5px;color:var(--vk-muted);letter-spacing:.04em}
+
+  .vk-hero__visual{position:relative}
+  .vk-hero__cover{
+    border-radius:26px;overflow:hidden;border:1px solid var(--vk-line-2);
+    box-shadow:0 34px 80px rgba(0,0,0,.55);position:relative;aspect-ratio:16/11;background:var(--vk-ink-3);
+  }
+  .vk-hero__cover img{width:100%;height:100%;object-fit:cover}
+  .vk-hero__cover::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 44%,rgba(10,8,16,.86));
+  }
+  .vk-hero__play{
+    position:absolute;inset:0;display:grid;place-items:center;z-index:2;
+  }
+  .vk-hero__play span{
+    width:74px;height:74px;border-radius:50%;display:grid;place-items:center;
+    background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4);
+    backdrop-filter:blur(6px);transition:.25s;
+  }
+  .vk-hero__play span::after{
+    content:"";width:0;height:0;margin-left:5px;
+    border-left:19px solid #fff;border-top:12px solid transparent;border-bottom:12px solid transparent;
+  }
+  .vk-hero__cover:hover .vk-hero__play span{transform:scale(1.08);background:rgba(185,140,255,.42)}
+  .vk-hero__caption{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:20px 22px;display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
+  .vk-hero__caption h3{font-size:17px;font-weight:800;margin-bottom:5px}
+  .vk-hero__caption p{font-size:12.5px;color:#c9c2dc}
+  .vk-hero__badge{
+    flex:0 0 auto;font-size:11px;font-weight:800;letter-spacing:.1em;color:#16121c;
+    background:var(--vk-amber);padding:5px 10px;border-radius:8px;
+  }
+  .vk-hero__float{
+    position:absolute;right:-12px;bottom:-24px;z-index:4;
+    background:rgba(30,26,40,.94);border:1px solid var(--vk-line-2);border-radius:16px;
+    padding:12px 16px;display:flex;align-items:center;gap:10px;box-shadow:var(--vk-shadow);
+    backdrop-filter:blur(10px);
+  }
+  .vk-hero__float i{width:9px;height:9px;border-radius:50%;background:var(--vk-mint);box-shadow:0 0 0 0 rgba(92,224,198,.7);animation:vkPulse 2.2s infinite;flex:0 0 auto}
+  @keyframes vkPulse{0%{box-shadow:0 0 0 0 rgba(92,224,198,.55)}70%{box-shadow:0 0 0 12px rgba(92,224,198,0)}100%{box-shadow:0 0 0 0 rgba(92,224,198,0)}}
+  .vk-hero__float b{font-size:12.5px;font-weight:700;color:#fff}
+  .vk-hero__float small{display:block;font-size:10.5px;color:var(--vk-muted)}
+
+  /* ============ 关键词解析（长文） ============ */
+  .vk-story{padding:64px 0 20px}
+  .vk-story__grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:start}
+  .vk-story__aside{
+    position:sticky;top:calc(var(--vk-stick) + 18px);
+    border:1px solid var(--vk-line);border-radius:var(--vk-radius);
+    padding:26px;background:linear-gradient(170deg,rgba(185,140,255,.1),rgba(255,255,255,.015));
+  }
+  .vk-story__aside h3{font-size:19px;font-weight:800;margin-bottom:8px;line-height:1.4}
+  .vk-story__aside p{font-size:13.5px;color:var(--vk-muted);margin-bottom:18px}
+  .vk-story__list{list-style:none;display:grid;gap:12px}
+  .vk-story__list li{display:flex;gap:11px;font-size:13.5px;color:#c6c0d7;line-height:1.6}
+  .vk-story__list b{flex:0 0 22px;height:22px;border-radius:7px;display:grid;place-items:center;background:rgba(185,140,255,.2);color:var(--vk-neon);font-size:11.5px;font-weight:800}
+  .vk-story__body{columns:2;column-gap:38px;color:#b8b1ca;font-size:14.5px}
+  .vk-story__body p{margin-bottom:18px;break-inside:avoid}
+  .vk-story__body p:first-child::first-letter{
+    float:left;font-size:52px;line-height:.86;font-weight:900;color:var(--vk-neon);
+    margin:6px 10px 0 0;
+  }
+  .vk-story__body strong{color:#fff;font-weight:700}
+  .vk-story__body em{font-style:normal;color:var(--vk-mint)}
+  .vk-story__quote{
+    break-inside:avoid;margin:0 0 18px;padding:18px 20px;border-radius:14px;
+    background:rgba(255,255,255,.045);border-left:3px solid var(--vk-pink);
+    font-size:14px;color:#ddd6ec;font-style:italic;
+  }
+  .vk-story__tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+
+  /* ============ 焦点内容 ============ */
+  .vk-focus__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}
+  .vk-focus__main{position:relative;border-radius:var(--vk-radius);overflow:hidden;border:1px solid var(--vk-line-2);min-height:330px;display:flex;flex-direction:column;justify-content:flex-end}
+  .vk-focus__main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .vk-focus__main:hover img{transform:scale(1.04)}
+  .vk-focus__main::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,8,16,.1) 30%,rgba(10,8,16,.92))}
+  .vk-focus__mainbody{position:relative;z-index:2;padding:26px}
+  .vk-focus__mainbody h3{font-size:clamp(20px,2.4vw,27px);font-weight:900;line-height:1.3;margin:10px 0 10px}
+  .vk-focus__mainbody p{font-size:13.5px;color:#c6bfd8;max-width:520px}
+  .vk-focus__meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;font-size:12px;color:#a9a2bc}
+  .vk-focus__meta span{display:inline-flex;align-items:center;gap:5px}
+
+  .vk-focus__side{display:grid;grid-template-rows:repeat(3,1fr);gap:14px}
+  .vk-mini{
+    display:grid;grid-template-columns:104px 1fr;gap:14px;align-items:center;
+    padding:12px;border-radius:15px;border:1px solid var(--vk-line);
+    background:rgba(255,255,255,.035);transition:.22s;cursor:pointer;
+  }
+  .vk-mini:hover{background:rgba(185,140,255,.1);border-color:rgba(185,140,255,.35);transform:translateX(3px)}
+  .vk-mini__thumb{border-radius:10px;overflow:hidden;aspect-ratio:16/10;position:relative}
+  .vk-mini__thumb img{width:100%;height:100%;object-fit:cover}
+  .vk-mini__thumb::after{
+    content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:0;height:0;border-left:11px solid rgba(255,255,255,.92);
+    border-top:7px solid transparent;border-bottom:7px solid transparent;
+  }
+  .vk-mini h4{font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px}
+  .vk-mini p{font-size:11.5px;color:var(--vk-muted)}
+
+  /* ============ 热门视频流 ============ */
+  .vk-feed__tabs{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:26px}
+  .vk-tab{
+    padding:7px 16px;border-radius:999px;font-size:13px;font-weight:600;color:#bfb8d1;
+    border:1px solid var(--vk-line);background:rgba(255,255,255,.03);transition:.2s;
+  }
+  .vk-tab:hover{color:#fff;border-color:var(--vk-line-2)}
+  .vk-tab.is-on{background:linear-gradient(120deg,var(--vk-neon),var(--vk-pink));color:#16121c;border-color:transparent;font-weight:800}
+  .vk-feed__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .vk-card{
+    border-radius:var(--vk-radius);overflow:hidden;border:1px solid var(--vk-line);
+    background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.014));
+    display:flex;flex-direction:column;transition:.25s;
+  }
+  .vk-card:hover{transform:translateY(-5px);border-color:rgba(185,140,255,.4);box-shadow:0 22px 50px rgba(0,0,0,.5)}
+  .vk-card__cover{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--vk-ink-3)}
+  .vk-card__cover img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .vk-card:hover .vk-card__cover img{transform:scale(1.06)}
+  .vk-card__cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,8,16,.6))}
+  .vk-card__play{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(.9);z-index:2;
+    width:48px;height:48px;border-radius:50%;display:grid;place-items:center;
+    background:rgba(22,18,28,.6);border:1px solid rgba(255,255,255,.35);
+    opacity:0;transition:.25s;backdrop-filter:blur(4px);
+  }
+  .vk-card:hover .vk-card__play{opacity:1;transform:translate(-50%,-50%) scale(1)}
+  .vk-card__play::after{content:"";width:0;height:0;margin-left:3px;border-left:13px solid #fff;border-top:8px solid transparent;border-bottom:8px solid transparent}
+  .vk-card__tag{position:absolute;left:10px;top:10px;z-index:2}
+  .vk-card__dur{position:absolute;right:10px;bottom:10px;z-index:2;font-size:11px;font-variant-numeric:tabular-nums;padding:2px 8px;border-radius:6px;background:rgba(10,8,16,.76);color:#e7e2f3}
+  .vk-card__body{padding:15px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .vk-card__body h3{font-size:15.5px;font-weight:800;line-height:1.45}
+  .vk-card__body p{font-size:12.5px;color:var(--vk-muted);line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .vk-card__foot{margin-top:auto;padding-top:11px;border-top:1px dashed var(--vk-line);display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .vk-card__author{display:flex;align-items:center;gap:7px;font-size:12px;color:#b6afc9;min-width:0}
+  .vk-avatar{width:24px;height:24px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;font-size:10.5px;font-weight:800;color:#16121c;letter-spacing:.02em}
+  .vk-card__author span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .vk-actions{display:flex;align-items:center;gap:4px;flex:0 0 auto}
+  .vk-act{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;color:#a9a2bc;padding:4px 7px;border-radius:8px;transition:.18s}
+  .vk-act:hover{background:rgba(255,255,255,.07);color:#fff}
+  .vk-act.is-liked{color:var(--vk-pink)}
+  .vk-act.is-saved{color:var(--vk-amber)}
+  .vk-act svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linejoin:round}
+  .vk-act.is-liked svg,.vk-act.is-saved svg{fill:currentColor;stroke:currentColor}
+
+  /* ============ 创作者 ============ */
+  .vk-creators__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .vk-creator{
+    padding:22px 20px;border-radius:var(--vk-radius);border:1px solid var(--vk-line);
+    background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.012));
+    text-align:center;transition:.25s;position:relative;overflow:hidden;
+  }
+  .vk-creator::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,var(--vk-neon),transparent);opacity:0;transition:.25s}
+  .vk-creator:hover{transform:translateY(-5px);border-color:rgba(185,140,255,.35)}
+  .vk-creator:hover::before{opacity:1}
+  .vk-creator__av{
+    width:68px;height:68px;border-radius:22px;margin:0 auto 14px;display:grid;place-items:center;
+    font-size:23px;font-weight:900;color:#16121c;letter-spacing:-.02em;
+    box-shadow:0 10px 26px rgba(0,0,0,.35);
+  }
+  .vk-creator h3{font-size:16px;font-weight:800;margin-bottom:4px}
+  .vk-creator__field{font-size:11.5px;color:var(--vk-neon);font-weight:700;letter-spacing:.05em;margin-bottom:10px}
+  .vk-creator p{font-size:12.5px;color:var(--vk-muted);line-height:1.65;margin-bottom:14px;min-height:60px}
+  .vk-creator__nums{display:flex;justify-content:center;gap:16px;font-size:11.5px;color:#b0a9c2;padding-top:12px;border-top:1px dashed var(--vk-line)}
+  .vk-creator__nums b{color:#fff;font-size:13px;display:block;font-variant-numeric:tabular-nums}
+
+  /* ============ 专题 ============ */
+  .vk-topics__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .vk-topic{
+    position:relative;border-radius:var(--vk-radius);overflow:hidden;
+    min-height:225px;display:flex;flex-direction:column;justify-content:space-between;
+    padding:22px;border:1px solid var(--vk-line-2);transition:.28s;
+  }
+  .vk-topic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .vk-topic:hover img{transform:scale(1.06)}
+  .vk-topic::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(20,16,30,.34),rgba(14,11,22,.92))}
+  .vk-topic>*{position:relative;z-index:2}
+  .vk-topic__state{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#dffbf4;background:rgba(92,224,198,.18);border:1px solid rgba(92,224,198,.35);padding:3px 10px;border-radius:999px;align-self:flex-start}
+  .vk-topic h3{font-size:18px;font-weight:900;line-height:1.35;margin:10px 0 7px}
+  .vk-topic p{font-size:12.5px;color:#bfb8d1;line-height:1.6}
+  .vk-topic__num{font-size:11.5px;color:#a39cb8;margin-top:12px;display:flex;align-items:center;gap:8px}
+
+  /* ============ 评价 ============ */
+  .vk-voice__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .vk-voice{
+    padding:20px;border-radius:15px;border:1px solid var(--vk-line);
+    background:rgba(255,255,255,.035);display:flex;flex-direction:column;gap:10px;transition:.2s;
+  }
+  .vk-voice:hover{background:rgba(185,140,255,.075);border-color:rgba(185,140,255,.28)}
+  .vk-voice__top{display:flex;align-items:center;gap:10px}
+  .vk-voice__name{font-size:13px;font-weight:700}
+  .vk-voice__src{font-size:10.5px;color:var(--vk-muted)}
+  .vk-voice p{font-size:13px;color:#c3bcd5;line-height:1.7}
+  .vk-voice__stars{font-size:11.5px;letter-spacing:2px;color:var(--vk-amber)}
+
+  /* ============ 创作灵感 ============ */
+  .vk-lab__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .vk-spark{
+    padding:22px;border-radius:15px;border:1px solid var(--vk-line);
+    background:linear-gradient(150deg,rgba(92,224,198,.08),rgba(255,255,255,.02));
+    transition:.22s;
+  }
+  .vk-spark:hover{transform:translateY(-4px);border-color:rgba(92,224,198,.35)}
+  .vk-spark__icon{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:rgba(92,224,198,.16);color:var(--vk-mint);font-size:18px;font-weight:800;margin-bottom:14px}
+  .vk-spark h3{font-size:15px;font-weight:800;margin-bottom:7px}
+  .vk-spark p{font-size:12.5px;color:var(--vk-muted);line-height:1.7}
+  .vk-spark ul{list-style:none;margin-top:12px;display:grid;gap:6px}
+  .vk-spark li{font-size:12px;color:#bab3ce;padding-left:14px;position:relative}
+  .vk-spark li::before{content:"›";position:absolute;left:0;color:var(--vk-mint);font-weight:800}
+
+  /* ============ 动态/更新 ============ */
+  .vk-news__grid{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:start}
+  .vk-newslist{display:grid;gap:2px}
+  .vk-newsitem{
+    display:grid;grid-template-columns:78px 1fr auto;gap:16px;align-items:center;
+    padding:17px 14px;border-radius:12px;border-bottom:1px solid var(--vk-line);transition:.2s;
+  }
+  .vk-newsitem:hover{background:rgba(255,255,255,.04);border-radius:12px}
+  .vk-newsitem__date{font-size:11.5px;color:var(--vk-muted);font-variant-numeric:tabular-nums;line-height:1.5}
+  .vk-newsitem__date b{display:block;font-size:17px;color:#fff;font-weight:900}
+  .vk-newsitem h4{font-size:14px;font-weight:700;line-height:1.55}
+  .vk-newsitem p{font-size:12px;color:var(--vk-muted);margin-top:2px}
+  .vk-newslist__type{font-size:10.5px;font-weight:800;padding:3px 9px;border-radius:6px;background:rgba(185,140,255,.16);color:var(--vk-neon);white-space:nowrap}
+  .vk-sidecard{
+    border:1px solid var(--vk-line);border-radius:var(--vk-radius);padding:22px;
+    background:linear-gradient(160deg,rgba(255,95,162,.1),rgba(255,255,255,.02));
+  }
+  .vk-sidecard h3{font-size:16px;font-weight:800;margin-bottom:8px}
+  .vk-sidecard p{font-size:13px;color:var(--vk-muted);margin-bottom:16px;line-height:1.7}
+  .vk-sidecard__row{display:flex;align-items:center;justify-content:space-between;font-size:12.5px;color:#c4bdd6;padding:10px 0;border-bottom:1px dashed var(--vk-line)}
+  .vk-sidecard__row:last-of-type{border-bottom:none}
+  .vk-sidecard__row b{color:var(--vk-mint);font-variant-numeric:tabular-nums}
+  .vk-sidecard__forms{display:flex;flex-direction:column;gap:9px;margin-top:14px}
+  .vk-sidecard__forms input{
+    width:100%;padding:11px 14px;border-radius:11px;border:1px solid var(--vk-line-2);
+    background:rgba(0,0,0,.24);color:#fff;outline:none;font-size:13px;
+  }
+  .vk-sidecard__forms input:focus{border-color:var(--vk-neon)}
+  .vk-sidecard__forms input::placeholder{color:#7d7692}
+
+  /* ============ FAQ ============ */
+  .vk-faq{display:grid;grid-template-columns:1fr 1fr;gap:0 34px;align-items:start}
+  .vk-faq details{border-bottom:1px solid var(--vk-line);padding:4px 0}
+  .vk-faq summary{
+    list-style:none;display:flex;align-items:center;justify-content:space-between;gap:14px;
+    cursor:pointer;padding:16px 4px;font-size:14.5px;font-weight:700;color:#e5dff2;
+  }
+  .vk-faq summary::-webkit-details-marker{display:none}
+  .vk-faq summary::after{content:"+";flex:0 0 auto;font-size:19px;font-weight:400;color:var(--vk-neon);transition:transform .2s}
+  .vk-faq details[open] summary::after{transform:rotate(45deg)}
+  .vk-faq details p{font-size:13px;color:var(--vk-muted);line-height:1.75;padding:0 4px 18px}
+
+  /* ============ 伙伴 ============ */
+  .vk-partners{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px}
+  .vk-partner{
+    padding:14px 26px;border-radius:13px;border:1px dashed var(--vk-line-2);
+    font-size:13px;font-weight:700;letter-spacing:.04em;color:#b2abc6;
+    transition:.22s;background:rgba(255,255,255,.02);
+  }
+  .vk-partner:hover{color:#fff;border-color:var(--vk-neon);background:rgba(185,140,255,.09)}
+
+  /* ============ 联系条 ============ */
+  .vk-contact{
+    border-radius:26px;border:1px solid var(--vk-line-2);overflow:hidden;position:relative;
+    background:
+      radial-gradient(600px 300px at 88% 0%,rgba(185,140,255,.26),transparent 68%),
+      radial-gradient(480px 260px at 4% 100%,rgba(255,95,162,.18),transparent 66%),
+      linear-gradient(150deg,#221d2e,#15121c);
+    padding:44px 40px;display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center;
+  }
+  .vk-contact h2{font-size:clamp(23px,2.9vw,31px);font-weight:900;line-height:1.28;margin-bottom:12px}
+  .vk-contact p{font-size:14px;color:#bdb6d0;max-width:520px}
+  .vk-contact__actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:22px}
+  .vk-contact__info{display:grid;gap:12px}
+  .vk-contact__card{
+    padding:14px 17px;border-radius:13px;background:rgba(255,255,255,.055);
+    border:1px solid var(--vk-line);display:flex;align-items:center;justify-content:space-between;gap:12px;
+  }
+  .vk-contact__card span{font-size:11.5px;color:var(--vk-muted)}
+  .vk-contact__card b{display:block;font-size:14px;color:#fff;margin-top:1px}
+  .vk-contact__card i{font-style:normal;font-size:15px}
+
+  /* ============ 页脚 ============ */
+  .vk-footer{border-top:1px solid var(--vk-line);margin-top:64px;padding:52px 0 30px;background:rgba(0,0,0,.2)}
+  .vk-footer__grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px}
+  .vk-footer__brand p{font-size:13px;color:var(--vk-muted);margin-top:14px;max-width:300px;line-height:1.75}
+  .vk-footer h4{font-size:12px;font-weight:800;letter-spacing:.14em;color:#8f88a6;margin-bottom:14px}
+  .vk-footer ul{list-style:none;display:grid;gap:9px}
+  .vk-footer li{font-size:13px;color:#b0a9c4}
+  .vk-footer li a:hover{color:var(--vk-neon)}
+  .vk-footer__bottom{
+    margin-top:40px;padding-top:22px;border-top:1px solid var(--vk-line);
+    display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
+    font-size:12px;color:#7e7794;
+  }
+  .vk-footer__bottom span{line-height:1.7}
+
+  /* ============ 工具 ============ */
+  .vk-top{
+    position:fixed;right:22px;bottom:24px;z-index:70;
+    width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+    background:linear-gradient(140deg,var(--vk-neon),var(--vk-pink));color:#16121c;
+    font-size:17px;font-weight:900;box-shadow:0 12px 28px rgba(0,0,0,.5);
+    opacity:0;pointer-events:none;transform:translateY(12px);transition:.28s;
+  }
+  .vk-top.is-on{opacity:1;pointer-events:auto;transform:translateY(0)}
+  .vk-toast{
+    position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);z-index:120;
+    padding:11px 22px;border-radius:999px;background:rgba(34,28,46,.97);
+    border:1px solid rgba(185,140,255,.45);color:#f1edfa;font-size:13px;font-weight:600;
+    box-shadow:0 16px 40px rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:.28s;
+    max-width:88vw;text-align:center;
+  }
+  .vk-toast.is-on{opacity:1;transform:translate(-50%,0)}
+
+  .vk-modal{
+    position:fixed;inset:0;z-index:110;display:grid;place-items:center;padding:22px;
+    background:rgba(8,6,12,.74);backdrop-filter:blur(6px);
+    opacity:0;pointer-events:none;transition:.22s;
+  }
+  .vk-modal.is-on{opacity:1;pointer-events:auto}
+  .vk-modal__box{
+    width:100%;max-width:520px;border-radius:20px;border:1px solid var(--vk-line-2);
+    background:linear-gradient(160deg,#251f32,#16131f);padding:28px;position:relative;
+    box-shadow:0 30px 80px rgba(0,0,0,.6);transform:translateY(12px);transition:.24s;
+  }
+  .vk-modal.is-on .vk-modal__box{transform:translateY(0)}
+  .vk-modal__box h3{font-size:19px;font-weight:800;margin-bottom:9px;padding-right:34px}
+  .vk-modal__box p{font-size:13px;color:var(--vk-muted);line-height:1.7;margin-bottom:16px}
+  .vk-modal__close{position:absolute;right:16px;top:14px;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;color:#a9a2bc;font-size:18px;border:1px solid var(--vk-line)}
+  .vk-modal__close:hover{color:#fff;border-color:var(--vk-line-2)}
+  .vk-modal__field{display:grid;gap:10px;margin-bottom:14px}
+  .vk-modal__field input,.vk-modal__field textarea{
+    width:100%;padding:11px 14px;border-radius:11px;border:1px solid var(--vk-line-2);
+    background:rgba(0,0,0,.3);color:#fff;outline:none;font-size:13px;font-family:inherit;
+  }
+  .vk-modal__field textarea{min-height:92px;resize:vertical}
+  .vk-modal__field input:focus,.vk-modal__field textarea:focus{border-color:var(--vk-neon)}
+  .vk-modal__foot{display:flex;justify-content:flex-end;gap:10px;margin-top:6px}
+
+  /* ============ 响应式 ============ */
+  @media (max-width:1080px){
+    .vk-hero__grid{grid-template-columns:1fr;gap:34px}
+    .vk-story__grid{grid-template-columns:1fr;gap:26px}
+    .vk-story__aside{position:static}
+    .vk-story__body{columns:1}
+    .vk-focus__grid{grid-template-columns:1fr}
+    .vk-focus__side{grid-template-rows:none;grid-template-columns:repeat(3,1fr)}
+    .vk-feed__grid{grid-template-columns:repeat(2,1fr)}
+    .vk-creators__grid{grid-template-columns:repeat(2,1fr)}
+    .vk-topics__grid{grid-template-columns:1fr 1fr}
+    .vk-voice__grid{grid-template-columns:1fr 1fr}
+    .vk-lab__grid{grid-template-columns:1fr 1fr}
+    .vk-news__grid{grid-template-columns:1fr}
+    .vk-footer__grid{grid-template-columns:1fr 1fr}
+    .vk-contact{grid-template-columns:1fr;padding:34px 26px}
+  }
+  @media (max-width:860px){
+    :root{--vk-stick:104px}
+    .vk-nav,.vk-search{display:none}
+    .vk-burger{display:flex}
+    .vk-header{padding:12px 18px}
+    .vk-notice{padding:8px 18px;font-size:12px}
+    .vk-section{padding:56px 0}
+    .vk-hero__stats{grid-template-columns:1fr 1fr 1fr;gap:10px}
+    .vk-stat{padding:12px}
+    .vk-stat b{font-size:19px}
+    .vk-faq{grid-template-columns:1fr}
+  }
+  @media (max-width:620px){
+    .vk-feed__grid{grid-template-columns:1fr}
+    .vk-focus__side{grid-template-columns:1fr}
+    .vk-creators__grid{grid-template-columns:1fr 1fr}
+    .vk-topics__grid{grid-template-columns:1fr}
+    .vk-voice__grid{grid-template-columns:1fr}
+    .vk-lab__grid{grid-template-columns:1fr}
+    .vk-footer__grid{grid-template-columns:1fr}
+    .vk-hero__float{right:0;bottom:-18px;padding:10px 13px}
+    .vk-hero__stats{grid-template-columns:1fr 1fr}
+    .vk-newsitem{grid-template-columns:64px 1fr;gap:12px}
+    .vk-newslist__type{grid-column:2;justify-self:start}
+    .vk-sechead{margin-bottom:24px}
+    .vk-section{padding:44px 0}
+    .vk-wrap{padding:0 16px}
+    .vk-contact{padding:26px 20px}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告 + 页头 -->
+<div class="vk-stickbar">
+  <div class="vk-notice" aria-label="站内最新公告">
+    <span class="vk-notice__tag">新增</span>
+    <div class="vk-notice__roll" id="vkNoticeRoll">
+      <div class="vk-notice__item is-on"><b>「女王的后台」</b>第 12 期上线，记录一场没有提词器的对话 <span class="vk-notice__time">· 今日 10:20</span></div>
+      <div class="vk-notice__item"><b>「城市夜行」</b>企划开放报名，首批 30 位创作者入选名单已公布 <span class="vk-notice__time">· 11-18</span></div>
+      <div class="vk-notice__item"><b>女王影像实验室</b>更新 6 套剪辑模板，支持一键套用 <span class="vk-notice__time">· 11-17</span></div>
+      <div class="vk-notice__item"><b>官方发布</b>｜《真实的力量》年度特别篇 4K 高清版已更新 <span class="vk-notice__time">· 11-16</span></div>
+    </div>
+  </div>
+
+  <header class="vk-header">
+    <a class="vk-brand" href="#vkHome" aria-label="女王的视频vk 官方首页">
+      <span class="vk-brand__mark" aria-hidden="true"></span>
+      <span class="vk-brand__name">女王的视频vk<small>QUEEN · VIDEO PORTAL</small></span>
+    </a>
+    <nav class="vk-nav" aria-label="主导航">
+      <a href="#vkHome" class="is-active">首页</a>
+      <a href="#vkStory">品牌故事</a>
+      <a href="#vkFocus">焦点内容</a>
+      <a href="#vkFeed">视频精选</a>
+      <a href="#vkCreators">创作者</a>
+      <a href="#vkNews">企业动态</a>
+      <a href="#vkContact">联系我们</a>
+    </nav>
+    <form class="vk-search" id="vkSearchForm" role="search" autocomplete="off">
+      <input type="search" id="vkSearchInput" placeholder="搜索视频、创作者、专题" aria-label="站内搜索">
+      <button type="submit" aria-label="提交搜索">⌕</button>
+    </form>
+    <button class="vk-burger" id="vkBurger" aria-label="展开导航菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="vk-mobilenav" id="vkMobileNav">
+    <a href="#vkHome">首页</a>
+    <a href="#vkStory">品牌故事</a>
+    <a href="#vkFocus">焦点内容</a>
+    <a href="#vkFeed">视频精选</a>
+    <a href="#vkCreators">创作者</a>
+    <a href="#vkNews">企业动态</a>
+    <a href="#vkLab">创作灵感</a>
+    <a href="#vkFaq">常见问题</a>
+    <a href="#vkContact">联系我们</a>
+  </div>
+</div>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="vk-hero" id="vkHome">
+    <div class="vk-wrap vk-hero__grid">
+      <div>
+        <div class="vk-hero__flags">
+          <span class="vk-flag"><b>官方网站</b> · 官方认证</span>
+          <span class="vk-flag">企业级内容品牌</span>
+          <span class="vk-flag">原创 · 正版 · 高清</span>
+        </div>
+        <h1>女王的视频<span>vk</span></h1>
+        <p class="vk-hero__slogan">一家以真实影像为底色的视频品牌官网，<em>记录被看见的力量</em>。</p>
+        <p class="vk-hero__intro">
+          <strong>女王的视频vk</strong> 是深耕人物影像与创作现场的视频品牌平台，致力于为创作者与企业搭建高品质内容生态。我们相信，每一个被认真拍摄的瞬间都值得被收藏；每一段坦诚的讲述，都能成为他人前行的光。作为持续运营的原创内容社区，平台以专业制作、正版授权与高清呈现为标准，让真实、温暖、有力量的故事，在这里被更多人看见。
+        </p>
+        <div class="vk-hero__actions">
+          <a class="vk-btn vk-btn--primary" href="#vkFocus">进入焦点内容</a>
+          <a class="vk-btn vk-btn--ghost" href="#vkCreators">认识创作者</a>
+          <button class="vk-btn vk-btn--ghost" type="button" data-vk-modal="submit">投稿与报名</button>
+        </div>
+        <div class="vk-hero__stats">
+          <div class="vk-stat"><b data-vk-count="1268">1,268<i>+</i></b><span>原创影像作品</span></div>
+          <div class="vk-stat"><b data-vk-count="342">342<i>万</i></b><span>社区创作者关注</span></div>
+          <div class="vk-stat"><b data-vk-count="96">96<i>%</i></b><span>用户口碑好评率</span></div>
+        </div>
+      </div>
+
+      <div class="vk-hero__visual">
+        <div class="vk-hero__cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='880' height='605' viewBox='0 0 880 605'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232b2138'/%3E%3Cstop offset='.55' stop-color='%23452f5e'/%3E%3Cstop offset='1' stop-color='%231c1725'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23b98cff' stop-opacity='.9'/%3E%3Cstop offset='1' stop-color='%23ff5fa2' stop-opacity='.15'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='880' height='605' fill='url(%23g1)'/%3E%3Ccircle cx='680' cy='150' r='150' fill='%23ff5fa2' opacity='.16'/%3E%3Ccircle cx='230' cy='450' r='190' fill='%235ce0c6' opacity='.08'/%3E%3Cpath d='M0 470 Q220 360 440 450 T880 410 V605 H0Z' fill='url(%23g2)' opacity='.55'/%3E%3Crect x='356' y='150' width='168' height='210' rx='84' fill='none' stroke='%23b98cff' stroke-width='2' opacity='.65'/%3E%3Cpath d='M300 240 L300 500 M580 200 L580 470' stroke='%23ffffff' stroke-opacity='.14' stroke-width='1.5'/%3E%3Ccircle cx='440' cy='255' r='58' fill='none' stroke='%23ffffff' stroke-opacity='.35' stroke-width='1.4'/%3E%3Cpath d='M426 232 L468 255 L426 278Z' fill='%23ffffff' opacity='.8'/%3E%3Ctext x='58' y='86' font-family='sans-serif' font-size='17' fill='%23b98cff' opacity='.9'%3EQUEEN%3C/text%3E%3Ctext x='58' y='112' font-family='sans-serif' font-size='12' fill='%23ffffff' opacity='.42'%3EDOCUMENTARY%20%2F%20REAL%20STORIES%3C/text%3E%3C/svg%3E" alt="女王的视频vk官方品牌形象主视觉" width="880" height="605">
+          <div class="vk-hero__play" aria-hidden="true"><span></span></div>
+          <div class="vk-hero__caption">
+            <div>
+              <h3>《真实的力量》年度特别篇</h3>
+              <p>4K 高清 · 品牌官方发布 · 全长 28 分钟</p>
+            </div>
+            <span class="vk-hero__badge">正片首发</span>
+          </div>
+        </div>
+        <div class="vk-hero__float">
+          <i aria-hidden="true"></i>
+          <div><b>本周更新 7 部原创内容</b><small>创作者社区同步上线</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关键词定位与深度解析 -->
+  <section class="vk-section vk-story" id="vkStory">
+    <div class="vk-wrap">
+      <div class="vk-sechead">
+        <div>
+          <span class="vk-eyebrow">Brand Positioning</span>
+          <h2 class="vk-h2">关于「女王的视频vk」：<em>一个品牌的定位与解析</em></h2>
+          <p class="vk-sub">从品牌命名、内容主张到社区机制，理解女王的视频vk为什么选择以“真实”为方法，以“影像”为语言。</p>
+        </div>
+      </div>
+
+      <div class="vk-story__grid">
+        <aside class="vk-story__aside">
+          <h3>品牌关键词速览</h3>
+          <p>一句话概括：以人物影像为核心的高品质原创视频品牌，兼具企业级制作能力与社区活力。</p>
+          <ul class="vk-story__list">
+            <li><b>01</b><span>定位：人物影像与创作现场的视频品牌官网</span></li>
+            <li><b>02</b><span>方法：真实记录 + 专业制作 + 长期陪伴</span></li>
+            <li><b>03</b><span>机制：创作者社区、专题企划、投稿与报名</span></li>
+            <li><b>04</b><span>标准：原创、正版、高清、可被信赖</span></li>
+            <li><b>05</b><span>愿景：让值得被看见的故事，被更多人看见</span></li>
+          </ul>
+          <div class="vk-story__tags" style="margin-top:20px">
+            <span class="vk-chip">品牌故事</span>
+            <span class="vk-chip vk-chip--mint">内容生态</span>
+            <span class="vk-chip vk-chip--pink">创作者</span>
+            <span class="vk-chip vk-chip--amber">口碑</span>
+          </div>
+        </aside>
+
+        <div class="vk-story__body">
+          <p>「女王的视频vk」这个名字，最早出现在一间只有两盏灯的小剪辑室里。那时它还只是一个个人企划：用影像记录那些在人群里不太发声、却始终认真做事的人。后来，越来越多的创作者带着自己的素材找到我们，问能不能一起把故事讲完整。于是，一个名字逐渐长成了一个品牌，一个账号逐渐长成了一个<strong>官方网站</strong>——这就是女王的视频vk的起点。</p>
+
+          <p>作为一家持续运营的视频品牌与企业级内容平台，女王的视频vk并不把自己定义为“信息搬运者”。我们更愿意做的是<strong>原创内容的组织者</strong>：把散落的真实经历，整理成有结构的影像；把个体的微小瞬间，放进更大的时代语境里。平台上线的每一部作品，都要经过选题评估、拍摄沟通、粗剪复看与终版审校四个环节，我们坚持高清画质、正版授权与清晰署名，因为品质是品牌被<strong>值得信赖</strong>的前提。</p>
+
+          <p>从行业属性上判断，“女王的视频vk”属于人物 / 品牌 / IP 类型的关键词，因此本官网的整体形态被定位为<em>品牌官方视频门户</em>：它既要有企业官网的稳重与信息完整度，也要保留内容社区的呼吸感。你可以在这里读到品牌故事，看到焦点专题，认识活跃的创作者，也可以直接参与投稿与报名。我们希望这个页面不是一张静态名片，而是一个可以反复回来的<strong>内容生态</strong>入口。</p>
+
+          <div class="vk-story__quote">“不是所有故事都需要宏大叙事。有人认真生活，就值得被认真拍下来。”</div>
+
+          <p>在内容方向上，女王的视频vk围绕五个稳定的主题展开：<strong>人物访谈、创作幕后、城市探索、生活方式与治愈影像</strong>。人物访谈关注“人如何成为自己”；创作幕后把镜头转向镜头背后；城市探索记录不同地域的日常肌理；生活方式呈现具体而微的秩序感；治愈影像则为快节奏的日常留一点呼吸的缝隙。五个方向互相支撑，构成了平台多元而包容的内容面貌。</p>
+
+          <p>作为一个以创作者为基石的社区，我们始终把“用户至上”放在运营原则的第一条。平台为创作者提供选题库、剪辑模板、字幕规范与发布指导，也提供稳定的分成与署名机制；为观看者提供清晰的标签体系、可追溯的来源说明与轻量的互动方式。我们不追求短期的流量堆叠，而更在意长期的<em>口碑</em>积累。行业领先从来不是靠一句口号，而是靠一次次准时更新、一部部经得起回看的作品。</p>
+
+          <p>在制作层面，女王的视频vk坚持“轻设备、重沟通”的工作方式。我们相信，决定一部片子的不是器材列表，而是拍摄者是否真正理解了被拍摄者的处境。所以每一期影像开拍前，团队都会留出足够的时间做前置沟通；剪辑阶段，我们也会把粗剪版本同步给当事人复看，确认表达准确、情绪克制、细节无误解，再进入正式发布。这种略显缓慢的流程，是品牌<strong>匠心</strong>的具体体现，也是我们对“真实”两个字的尊重。</p>
+
+          <p>面向未来，女王的视频vk会继续在垂直领域里做深：一方面，持续推出高质量的原创专题与年度特别篇，强化品牌<strong>影响力</strong>；另一方面，开放更多社区入口，让普通创作者也能参与到“城市夜行”“后台对话”等企划中来。我们也会承担相应的社会责任，为公益影像、青年创作扶持计划提供制作与传播支持。成长与陪伴，是品牌与社区共同完成的长期课题。</p>
+
+          <p>如果你第一次来到女王的视频vk，可以从焦点内容开始看起；如果你已经是老朋友，欢迎在创作灵感区领取本周的脚本与剪辑思路，或者直接通过投稿入口把素材递给我们。官方网站存在的意义，不只是展示企业信息，更是让每一次真诚的表达都有落点。<strong>女王的视频vk</strong>，愿做那个稳定的落点。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="vk-section" id="vkFocus">
+    <div class="vk-wrap">
+      <div class="vk-sechead">
+        <div>
+          <span class="vk-eyebrow">Focus Selection</span>
+          <h2 class="vk-h2">焦点内容 · <em>本周值得一看</em></h2>
+          <p class="vk-sub">由品牌编辑部与创作者社区共同推荐，覆盖访谈、幕后与城市记录三类题材。</p>
+        </div>
+        <a class="vk-linkmore" href="#vkFeed">查看全部视频</a>
+      </div>
+
+      <div class="vk-focus__grid">
+        <article class="vk-focus__main">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='880' height='560' viewBox='0 0 880 560'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231c2733'/%3E%3Cstop offset='1' stop-color='%233d3a52'/%3E%3C/linearGradient%3E%3ClinearGradient id='f2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235ce0c6' stop-opacity='.75'/%3E%3Cstop offset='1' stop-color='%23b98cff' stop-opacity='.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='880' height='560' fill='url(%23f1)'/%3E%3Cpath d='M0 400 L240 300 L480 380 L720 270 L880 340 V560 H0Z' fill='url(%23f2)' opacity='.6'/%3E%3Ccircle cx='700' cy='120' r='74' fill='none' stroke='%23ffffff' stroke-opacity='.25' stroke-width='1.4'/%3E%3Cpath d='M660 120 L740 120 M700 80 L700 160' stroke='%23ffffff' stroke-opacity='.2' stroke-width='1.2'/%3E%3Crect x='70' y='70' width='190' height='120' rx='8' fill='%23ffffff' opacity='.07'/%3E%3Ctext x='86' y='112' font-family='sans-serif' font-size='13' fill='%23ffffff' opacity='.6'%3EEPD.12%3C/text%3E%3Ctext x='86' y='146' font-family='sans-serif' font-size='20' fill='%23ffffff' opacity='.85'%3E%E5%AF%B9%E8%AF%9D%3C/text%3E%3C/svg%3E" alt="焦点内容对谈节目《没有提词器的对话》封面" width="880" height="560">
+          <div class="vk-focus__mainbody">
+            <span class="vk-chip vk-chip--pink">人物访谈</span>
+            <h3>《没有提词器的对话》第 12 期：她把十年拍成了一部片</h3>
+            <p>一场没有预设问题的长谈，聊创作、聊失败、聊那些被剪掉的镜头。镜头之外，她只是一个习惯早起、认真记笔记的人。</p>
+            <div class="vk-focus__meta">
+              <span>◉ 时长 42:16</span><span>◉ 4K 高清</span><span>◉ 官方出品</span><span>◉ 3.2 万次收藏</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="vk-focus__side">
+          <article class="vk-mini">
+            <div class="vk-mini__thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='200' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%2321192b'/%3E%3Ccircle cx='250' cy='48' r='66' fill='%23ff5fa2' opacity='.2'/%3E%3Cpath d='M0 150 Q90 100 180 140 T320 120 V200 H0Z' fill='%238a5cf6' opacity='.35'/%3E%3Crect x='34' y='34' width='94' height='54' rx='6' fill='%23ffffff' opacity='.09'/%3E%3Ctext x='48' y='68' font-family='sans-serif' font-size='14' fill='%23ffffff' opacity='.68'%3EBEHIND%3C/text%3E%3C/svg%3E" alt="创作幕后企划《灯关掉之后》封面" width="320" height="200">
+            </div>
+            <div>
+              <h4>《灯关掉之后》：一支片子是怎么被剪出来的</h4>
+              <p>创作幕后 · 时长 18:40</p>
+            </div>
+          </article>
+
+          <article class="vk-mini">
+            <div class="vk-mini__thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='200' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%2318282f'/%3E%3Crect x='0' y='118' width='320' height='82' fill='%23101c22'/%3E%3Ccircle cx='76' cy='76' r='34' fill='%235ce0c6' opacity='.22'/%3E%3Cpath d='M120 200 L170 96 L220 200Z' fill='%23ffb84d' opacity='.28'/%3E%3Ccircle cx='252' cy='58' r='20' fill='%23ffffff' opacity='.14'/%3E%3C/svg%3E" alt="城市夜行系列《十一点的地铁末班车》封面" width="320" height="200">
+            </div>
+            <div>
+              <h4>城市夜行：十一点的地铁末班车</h4>
+              <p>城市探索 · 时长 21:05</p>
+            </div>
+          </article>
+
+          <article class="vk-mini">
+            <div class="vk-mini__thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='200' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23251d1a'/%3E%3Ccircle cx='160' cy='96' r='56' fill='none' stroke='%23ffb84d' stroke-opacity='.5' stroke-width='1.6'/%3E%3Cpath d='M80 170 Q160 130 240 170' stroke='%23ffb84d' stroke-opacity='.4' stroke-width='2' fill='none'/%3E%3Ctext x='26' y='38' font-family='sans-serif' font-size='13' fill='%23ffb84d' opacity='.8'%3EWARM%3C/text%3E%3C/svg%3E" alt="治愈影像企划《一顿慢慢吃完的晚饭》封面" width="320" height="200">
+            </div>
+            <div>
+              <h4>治愈影像：一顿慢慢吃完的晚饭</h4>
+              <p>生活方式 · 时长 12:33</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 视频精选 -->
+  <section class="vk-section vk-section--tight" id="vkFeed">
+    <div class="vk-wrap">
+      <div class="vk-sechead">
+        <div>
+          <span class="vk-eyebrow">Video Feed</span>
+          <h2 class="vk-h2">视频精选 · <em>社区热度在更新</em></h2>
+          <p class="vk-sub">按题材浏览，找到与你此刻心情同频的那一部。点击卡片可收藏、点赞，或与创作者聊聊。</p>
+        </div>
+        <a class="vk-linkmore" href="#vkLab">获取创作灵感</a>
+      </div>
+
+      <div class="vk-feed__tabs" role="tablist" aria-label="视频分类筛选">
+        <button class="vk-tab is-on" type="button" data-vk-filter="all" role="tab" aria-selected="true">全部</button>
+        <button class="vk-tab" type="button" data-vk-filter="访谈" role="tab" aria-selected="false">人物访谈</button>
+        <button class="vk-tab" type="button" data-vk-filter="幕后" role="tab" aria-selected="false">创作幕后</button>
+        <button class="vk-tab" type="button" data-vk-filter="城市" role="tab" aria-selected="false">城市探索</button>
+        <button class="vk-tab" type="button" data-vk-filter="生活" role="tab" aria-selected="false">生活方式</button>
+      </div>
+
+      <div class="vk-feed__grid" id="vkFeedGrid">
+
+        <article class="vk-card" data-vk-cat="访谈">
+          <div class="vk-card__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='270' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%232b2236'/%3E%3Ccircle cx='360' cy='60' r='98' fill='%239a6bff' opacity='.26'/%3E%3Cpath d='M0 206 Q140 150 260 196 T480 172 V270 H0Z' fill='%235ce0c6' opacity='.14'/%3E%3Ccircle cx='120' cy='86' r='30' fill='none' stroke='%23ffffff' stroke-opacity='.4'/%3E%3Cpath d='M108 74 Q120 100 132 74' stroke='%23ffffff' stroke-opacity='.5' fill='none'/%3E%3Ctext x='30' y='250' font-family='sans-serif' font-size='11' fill='%23ffffff' opacity='.35'%3EINTERVIEW%3C/text%3E%3C/svg%3E" alt="人物访谈视频《她为什么选择留在小城》封面" width="480" height="270">
+            <span class="vk-card__tag vk-chip vk-chip--pink">访谈</span>
+            <span class="vk-card__dur">36:12</span>
+            <span class="vk-card__play" aria-hidden="true"></span>
+          </div>
+          <div class="vk-card__body">
+            <h3>她为什么选择留在小城</h3>
+            <p>一份关于“留下”的样本观察：三个人，三种理由，同一个不后悔的决定。</p>
+            <div class="vk-card__foot">
+              <div class="vk-card__author"><span class="vk-avatar" style="background:%23b98cff">林</span><span>林间频道</span></div>
+              <div class="vk-actions">
+                <button class="vk-act" type="button" data-vk-like aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 4.7-7 9-7 9z"/></svg><i>128</i></button>
+                <button class="vk-act" type="button" data-vk-save aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg><i>收藏</i></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="vk-card" data-vk-cat="幕后">
+          <div class="vk-card__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='270' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23172026'/%3E%3Crect x='0' y='190' width='480' height='80' fill='%230d1418'/%3E%3Crect x='58' y='64' width='120' height='86' rx='7' fill='%23ffffff' opacity='.08'/%3E%3Cpath d='M78 96 L112 96 M78 118 L142 118' stroke='%235ce0c6' stroke-opacity='.6' stroke-width='2'/%3E%3Ccircle cx='380' cy='90' r='44' fill='%23ff5fa2' opacity='.18'/%3E%3Ctext x='58' y='48' font-family='sans-serif' font-size='12' fill='%235ce0c6' opacity='.8'%3EMAKING%3C/text%3E%3C/svg%3E" alt="创作幕后视频《一支广告片从脚本到成片》封面" width="480" height="270">
+            <span class="vk-card__tag vk-chip vk-chip--mint">幕后</span>
+            <span class="vk-card__dur">24:48</span>
+            <span class="vk-card__play" aria-hidden="true"></span>
+          </div>
+          <div class="vk-card__body">
+            <h3>一支广告片从脚本到成片</h3>
+            <p>把 72 小时的拍摄压缩成 24 分钟，所有被推翻的版本都在这里。</p>
+            <div class="vk-card__foot">
+              <div class="vk-card__author"><span class="vk-avatar" style="background:%235ce0c6">工</span><span>工作室手记</span></div>
+              <div class="vk-actions">
+                <button class="vk-act" type="button" data-vk-like aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 4.7-7 9-7 9z"/></svg><i>96</i></button>
+                <button class="vk-act" type="button" data-vk-save aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg><i>收藏</i></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="vk-card" data-vk-cat="城市">
+          <div class="vk-card__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='270' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23141c2b'/%3E%3Crect x='0' y='150' width='480' height='120' fill='%230d1220'/%3E%3Ccircle cx='404' cy='58' r='26' fill='%23ffb84d' opacity='.55'/%3E%3Cpath d='M40 150 L40 96 L92 96 L92 150 M120 150 L120 70 L168 70 L168 150 M204 150 L204 112 L250 112 L250 150' stroke='%23b98cff' stroke-opacity='.42' stroke-width='1.6' fill='none'/%3E%3Cpath d='M290 150 L290 84 L344 84 L344 150' stroke='%23ffffff' stroke-opacity='.18' stroke-width='1.6' fill='none'/%3E%3C/svg%3E" alt="城市探索视频《凌晨四点的批发市场》封面" width="480" height="270">
+            <span class="vk-card__tag vk-chip vk-chip--amber">城市</span>
+            <span class="vk-card__dur">19:30</span>
+            <span class="vk-card__play" aria-hidden="true"></span>
+          </div>
+          <div class="vk-card__body">
+            <h3>凌晨四点的批发市场</h3>
+            <p>一座城市醒来的方式，藏在最先亮灯的那条街上。</p>
+            <div class="vk-card__foot">
+              <div class="vk-card__author"><span class="vk-avatar" style="background:%23ffb84d">夜</span><span>夜行记录组</span></div>
+              <div class="vk-actions">
+                <button class="vk-act" type="button" data-vk-like aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 4.7-7 9-7 9z"/></svg><i>211</i></button>
+                <button class="vk-act" type="button" data-vk-save aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg><i>收藏</i></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="vk-card" data-vk-cat="生活">
+          <div class="vk-card__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='270' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%2326201d'/%3E%3Ccircle cx='150' cy='130' r='72' fill='%23ffb84d' opacity='.14'/%3E%3Ccircle cx='150' cy='130' r='44' fill='none' stroke='%23ffb84d' stroke-opacity='.5' stroke-width='1.5'/%3E%3Cpath d='M300 190 Q340 120 396 176' stroke='%235ce0c6' stroke-opacity='.35' stroke-width='2' fill='none'/%3E%3Crect x='286' y='76' width='112' height='62' rx='6' fill='%23ffffff' opacity='.07'/%3E%3Ctext x='28' y='44' font-family='sans-serif' font-size='12' fill='%23ffb84d' opacity='.8'%3ESLOW%3C/text%3E%3C/svg%3E" alt="生活方式视频《一个人也要好好吃饭》封面" width="480" height="270">
+            <span class="vk-card__tag vk-chip">生活</span>
+            <span class="vk-card__dur">14:02</span>
+            <span class="vk-card__play" aria-hidden="true"></span>
+          </div>
+          <div class="vk-card__body">
+            <h3>一个人也要好好吃饭</h3>
+            <p>三菜一汤的操作流，以及关于独居生活的琐碎与诚实。</p>
+            <div class="vk-card__foot">
+              <div class="vk-card__author"><span class="vk-avatar" style="background:%23ff5fa2">慢</span><span>慢火小厨</span></div>
+              <div class="vk-actions">
+                <button class="vk-act" type="button" data-vk-like aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 4.7-7 9-7 9z"/></svg><i>342</i></button>
+                <button class="vk-act" type="button" data-vk-save aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg><i>收藏</i></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="vk-card" data-vk-cat="访谈">
+          <div class="vk-card__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='270' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23201a2c'/%3E%3Cpath d='M0 210 Q120 130 250 190 T480 150 V270 H0Z' fill='%23b98cff' opacity='.16'/%3E%3Ccircle cx='240' cy='110' r='60' fill='none' stroke='%23ff5fa2' stroke-opacity='.4' stroke-width='1.6'/%3E%3Cpath d='M222 86 L262 110 L222 134Z' fill='%23ffffff' opacity='.6'/%3E%3Ccircle cx='88' cy='70' r='16' fill='%235ce0c6' opacity='.3'/%3E%3C/svg%3E" alt="人物访谈视频《镜头背后的女性摄影师》封面" width="480" height="270">
+            <span class="vk-card__tag vk-chip vk-chip--pink">访谈</span>
+            <span class="vk-card__dur">31:55</span>
+            <span class="vk-card__play" aria-hidden="true"></span>
+          </div>
+          <div class="vk-card__body">
+            <h3>镜头背后的女性摄影师</h3>
+            <p>她们拍别人，也拍自己。关于取景框里的权力与温柔。</p>
+            <div class="vk-card__foot">
+              <div class="vk-card__author"><span class="vk-avatar" style="background:%23b98cff">对</span><span>对话现场</span></div>
+              <div class="vk-actions">
+                <button class="vk-act" type="button" data-vk-like aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 4.7-7 9-7 9z"/></svg><i>187</i></button>
+                <button class="vk-act" type="button" data-vk-save aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg><i>收藏</i></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="vk-card" data-vk-cat="幕后">
+          <div class="vk-card__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='270' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%231b1d25'/%3E%3Crect x='52' y='54' width='376' height='162' rx='8' fill='%230e1016' stroke='%23b98cff' stroke-opacity='.3'/%3E%3Cpath d='M70 90 H240 M70 114 H200 M70 138 H280' stroke='%235ce0c6' stroke-opacity='.38' stroke-width='3'/%3E%3Crect x='300' y='74' width='108' height='122' rx='5' fill='%23ffffff' opacity='.06'/%3E%3Ctext x='70' y='200' font-family='sans-serif' font-size='11' fill='%23ffffff' opacity='.3'%3ETIMELINE%3C/text%3E%3C/svg%3E" alt="创作幕后视频《剪辑师的一天》封面" width="480" height="270">
+            <span class="vk-card__tag vk-chip vk-chip--mint">幕后</span>
+            <span class="vk-card__dur">22:17</span>
+            <span class="vk-card__play" aria-hidden="true"></span>
+          </div>
+          <div class="vk-card__body">
+            <h3>剪辑师的一天</h3>
+            <p>从素材箱到时间线，一个靠耐心和审美吃饭的职业日常。</p>
+            <div class="vk-card__foot">
+              <div class="vk-card__author"><span class="vk-avatar" style="background:%235ce0c6">剪</span><span>后台小组</span></div>
+              <div class="vk-actions">
+                <button class="vk-act" type="button" data-vk-like aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 4.7-7 9-7 9z"/></svg><i>74</i></button>
+                <button class="vk-act" type="button" data-vk-save aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg><i>收藏</i></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="vk-section vk-section--tight" id="vkTopics">
+    <div class="vk-wrap">
+      <div class="vk-sechead">
+        <div>
+          <span class="vk-eyebrow">Special Projects</span>
+          <h2 class="vk-h2">专题企划 · <em>正在进行中</em></h2>
+          <p class="vk-sub">每个企划都由品牌发起，向社区开放征集。你可以报名，也可以只做一名安静的观看者。</p>
+        </div>
+      </div>
+      <div class="vk-topics__grid">
+        <article class="vk-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='300' viewBox='0 0 420 300'%3E%3Crect width='420' height='300' fill='%231c2430'/%3E%3Ccircle cx='320' cy='64' r='80' fill='%23b98cff' opacity='.24'/%3E%3Cpath d='M0 220 Q120 160 230 210 T420 180 V300 H0Z' fill='%235ce0c6' opacity='.14'/%3E%3Cpath d='M60 220 L60 132 L140 132 L140 220 M170 220 L170 100 L250 100 L250 220' stroke='%23ffffff' stroke-opacity='.2' stroke-width='2' fill='none'/%3E%3C/svg%3E" alt="专题企划城市夜行封面" width="420" height="300">
+          <div>
+            <span class="vk-topic__state">● 报名中</span>
+            <h3>城市夜行</h3>
+            <p>用夜晚的视角重新认识一座城市。首批 30 位创作者已入选。</p>
+          </div>
+          <div class="vk-topic__num">◉ 已收到 186 份投稿 · 更新至 11-18</div>
+        </article>
+        <article class="vk-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='300' viewBox='0 0 420 300'%3E%3Crect width='420' height='300' fill='%23271d29'/%3E%3Crect x='70' y='70' width='280' height='170' rx='10' fill='%23ffffff' opacity='.05'/%3E%3Ccircle cx='150' cy='150' r='34' fill='none' stroke='%23ff5fa2' stroke-opacity='.55' stroke-width='1.6'/%3E%3Ccircle cx='270' cy='150' r='34' fill='none' stroke='%23ffb84d' stroke-opacity='.45' stroke-width='1.6'/%3E%3Cpath d='M184 150 H236' stroke='%23ffffff' stroke-opacity='.3' stroke-width='1.4' stroke-dasharray='4 5'/%3E%3C/svg%3E" alt="专题企划后台对话封面" width="420" height="300">
+          <div>
+            <span class="vk-topic__state">● 更新中</span>
+            <h3>后台对话</h3>
+            <p>把访谈搬到更松弛的地方：厨房、走廊、天台，以及回家路上。</p>
+          </div>
+          <div class="vk-topic__num">◉ 已上线 12 期 · 每月双更</div>
+        </article>
+        <article class="vk-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='300' viewBox='0 0 420 300'%3E%3Crect width='420' height='300' fill='%231e2622'/%3E%3Ccircle cx='210' cy='150' r='92' fill='none' stroke='%235ce0c6' stroke-opacity='.3' stroke-width='1.4'/%3E%3Ccircle cx='210' cy='150' r='58' fill='none' stroke='%23ffb84d' stroke-opacity='.34' stroke-width='1.4'/%3E%3Cpath d='M40 250 Q180 190 380 240' stroke='%23ffffff' stroke-opacity='.16' stroke-width='2' fill='none'/%3E%3Ctext x='34' y='50' font-family='sans-serif' font-size='12' fill='%235ce0c6' opacity='.7'%3EYEARLY%3C/text%3E%3C/svg%3E" alt="专题企划真实的力量年度特别篇封面" width="420" height="300">
+          <div>
+            <span class="vk-topic__state">● 已完结</span>
+            <h3>真实的力量 · 年度特别篇</h3>
+            <p>六个普通人的一年，剪成 4 集影像，记录那些不被注意的坚持。</p>
+          </div>
+          <div class="vk-topic__num">◉ 4K 高清 · 正版呈现 · 共 4 集</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="vk-section" id="vkCreators">
+    <div class="vk-wrap">
+      <div class="vk-sechead">
+        <div>
+          <span class="vk-eyebrow">Creator Matrix</span>
+          <h2 class="vk-h2">创作者矩阵 · <em>内容生态的基石</em></h2>
+          <p class="vk-sub">他们来自不同领域，共享同一种认真。点击卡片，查看作者档案与近期更新。</p>
+        </div>
+        <a class="vk-linkmore" href="#vkContact">申请入驻</a>
+      </div>
+      <div class="vk-creators__grid">
+        <article class="vk-creator">
+          <div class="vk-creator__av" style="background:linear-gradient(140deg,%23b98cff,%23ff5fa2)">林</div>
+          <h3>林间频道</h3>
+          <div class="vk-creator__field">人物访谈 · 城市记录</div>
+          <p>习惯用长镜头等人说完一句话。相信克制是影像的礼貌。</p>
+          <div class="vk-creator__nums"><div><b>86</b>作品</div><div><b>12.4万</b>关注</div></div>
+        </article>
+        <article class="vk-creator">
+          <div class="vk-creator__av" style="background:linear-gradient(140deg,%235ce0c6,%23b98cff)">工</div>
+          <h3>工作室手记</h3>
+          <div class="vk-creator__field">创作幕后 · 教程干货</div>
+          <p>把踩过的坑写成清单，把复杂的流程拆成能复制的步骤。</p>
+          <div class="vk-creator__nums"><div><b>64</b>作品</div><div><b>8.9万</b>关注</div></div>
+        </article>
+        <article class="vk-creator">
+          <div class="vk-creator__av" style="background:linear-gradient(140deg,%23ffb84d,%23ff5fa2)">夜</div>
+          <h3>夜行记录组</h3>
+          <div class="vk-creator__field">城市探索 · 在地文化</div>
+          <p>只在晚上出门，收集城市最松弛的那一面，和最好吃的宵夜。</p>
+          <div class="vk-creator__nums"><div><b>41</b>作品</div><div><b>6.2万</b>关注</div></div>
+        </article>
+        <article class="vk-creator">
+          <div class="vk-creator__av" style="background:linear-gradient(140deg,%235ce0c6,%23ffb84d)">慢</div>
+          <h3>慢火小厨</h3>
+          <div class="vk-creator__field">生活方式 · 治愈影像</div>
+          <p>做饭是她的解法。镜头里有锅气，也有一个人生活的秩序感。</p>
+          <div class="vk-creator__nums"><div><b>112</b>作品</div><div><b>15.7万</b>关注</div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户口碑 -->
+  <section class="vk-section vk-section--tight" id="vkVoice">
+    <div class="vk-wrap">
+      <div class="vk-sechead">
+        <div>
+          <span class="vk-eyebrow">Community Voice</span>
+          <h2 class="vk-h2">社区口碑 · <em>他们这样说起这里</em></h2>
+          <p class="vk-sub">来自观看者、创作者与合作方的真实反馈，帮助我们持续改进。</p>
+        </div>
+      </div>
+      <div class="vk-voice__grid">
+        <div class="vk-voice">
+          <div class="vk-voice__top">
+            <span class="vk-avatar" style="background:%23b98cff">周</span>
+            <div><div class="vk-voice__name">周予安</div><div class="vk-voice__src">观看者 · 关注 2 年</div></div>
+          </div>
+          <div class="vk-voice__stars">★★★★★</div>
+          <p>很少有平台愿意把片子做得这么“慢”。看完一集要缓一会儿，但那种感觉很值得。</p>
+        </div>
+        <div class="vk-voice">
+          <div class="vk-voice__top">
+            <span class="vk-avatar" style="background:%235ce0c6">陈</span>
+            <div><div class="vk-voice__name">陈默</div><div class="vk-voice__src">独立创作者</div></div>
+          </div>
+          <div class="vk-voice__stars">★★★★★</div>
+          <p>投稿流程很清楚，编辑会给具体的修改意见，不是敷衍的“感谢参与”。这一点很难得。</p>
+        </div>
+        <div class="vk-voice">
+          <div class="vk-voice__top">
+            <span class="vk-avatar" style="background:%23ff5fa2">阿</span>
+            <div><div class="vk-voice__name">阿桃</div><div class="vk-voice__src">观看者</div></div>
+          </div>
+          <div class="vk-voice__stars">★★★★☆</div>
+          <p>喜欢城市夜行系列，看完会想出门走走。希望以后多一些小城市的选题。</p>
+        </div>
+        <div class="vk-voice">
+          <div class="vk-voice__top">
+            <span class="vk-avatar" style="background:%23ffb84d">言</span>
+            <div><div class="vk-voice__name">言川</div><div class="vk-voice__src">品牌合作方</div></div>
+          </div>
+          <div class="vk-voice__stars">★★★★★</div>
+          <p>对接专业，脚本沟通很细，交付准时。作为企业方，我们更看重这种稳定的品质感。</p>
+        </div>
+        <div class="vk-voice">
+          <div class="vk-voice__top">
+            <span class="vk-avatar" style="background:%238a5cf6">木</span>
+            <div><div class="vk-voice__name">木子</div><div class="vk-voice__src">摄影爱好者</div></div>
+          </div>
+          <div class="vk-voice__stars">★★★★★</div>
+          <p>画面干净，字幕规范，高清看着很舒服。能感觉到背后有人在认真做审校。</p>
+        </div>
+        <div class="vk-voice">
+          <div class="vk-voice__top">
+            <span class="vk-avatar" style="background:%235ce0c6">许</span>
+            <div><div class="vk-voice__name">许一舟</div><div class="vk-voice__src">高校影像社团</div></div>
+          </div>
+          <div class="vk-voice__stars">★★★★☆</div>
+          <p>创作灵感区对我们社团帮助很大，尤其是脚本结构那几篇，直接拿来当教材了。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作灵感 -->
+  <section class="vk-section vk-section--tight" id="vkLab">
+    <div class="vk-wrap">
+      <div class="vk-sechead">
+        <div>
+          <span class="vk-eyebrow">Creation Lab</span>
+          <h2 class="vk-h2">创作灵感 · <em>把想法变成片子的方法</em></h2>
+          <p class="vk-sub">每周更新的脚本思路、标题建议与剪辑模板，对社区创作者长期开放。</p>
+        </div>
+        <a class="vk-linkmore" href="#vkFaq">查看使用说明</a>
+      </div>
+      <div class="vk-lab__grid">
+        <div class="vk-spark">
+          <div class="vk-spark__icon">✎</div>
+          <h3>脚本灵感 · 三幕式微纪录</h3>
+          <p>适合 5～8 分钟的短纪录片结构：用一个具体的场景开场，而不是旁白。</p>
+          <ul>
+            <li>开场：一个动作 + 一句原话</li>
+            <li>中段：一次转折 + 一个细节</li>
+            <li>结尾：回到开场场景，但意义不同</li>
+          </ul>
+        </div>
+        <div class="vk-spark">
+          <div class="vk-spark__icon">⌘</div>
+          <h3>标题建议 · 少形容词，多名词</h3>
+          <p>把“温暖治愈”换成“那碗面”“那把旧椅子”，观众更容易进入具体情境。</p>
+          <ul>
+            <li>用人物称呼代替身份标签</li>
+            <li>用时间地点制造画面感</li>
+            <li>避免绝对化表达</li>
+          </ul>
+        </div>
+        <div class="vk-spark">
+          <div class="vk-spark__icon">◐</div>
+          <h3>剪辑思路 · 留白也是内容</h3>
+          <p>情绪最强的段落，往往不需要配乐。先关掉音乐看一遍，再决定加不加。</p>
+          <ul>
+            <li>先剪节奏，再加声音</li>
+            <li>每 40 秒安排一次呼吸点</li>
+            <li>粗剪复看至少两遍</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 + 数据 -->
+  <section class="vk-section" id="vkNews">
+    <div class="vk-wrap">
+      <div class="vk-sechead">
+        <div>
+          <span class="vk-eyebrow">Newsroom</span>
+          <h2 class="vk-h2">企业动态 · <em>官方发布与更新日志</em></h2>
+          <p class="vk-sub">品牌资讯、内容更新与社区活动公告，均在此同步。</p>
+        </div>
+      </div>
+      <div class="vk-news__grid">
+        <div class="vk-newslist">
+          <div class="vk-newsitem">
+            <div class="vk-newsitem__date"><b>18</b>11月</div>
+            <div><h4>「城市夜行」企划首批入选名单公布</h4><p>30 位创作者将在 12 月完成首轮拍摄，作品统一进入官方精编推荐位。</p></div>
+            <span class="vk-newslist__type">企划</span>
+          </div>
+          <div class="vk-newsitem">
+            <div class="vk-newsitem__date"><b>16</b>11月</div>
+            <div><h4>《真实的力量》年度特别篇 4K 高清版更新</h4><p>重新调色并补充幕后花絮，已同步上线，支持收藏与分享。</p></div>
+            <span class="vk-newslist__type">内容</span>
+          </div>
+          <div class="vk-newsitem">
+            <div class="vk-newsitem__date"><b>13</b>11月</div>
+            <div><h4>品牌与三家高校影像社团达成合作</h4><p>共同开展青年创作者扶持计划，提供设备、导师与展映机会。</p></div>
+            <span class="vk-newslist__type">合作</span>
+          </div>
+          <div class="vk-newsitem">
+            <div class="vk-newsitem__date"><b>09</b>11月</div>
+            <div><h4>创作灵感区新增 6 套剪辑模板</h4><p>覆盖访谈、城市记录、生活方式三类题材，社区创作者可直接套用。</p></div>
+            <span class="vk-newslist__type">更新</span>
+          </div>
+          <div class="vk-newsitem">
+            <div class="vk-newsitem__date"><b>02</b>11月</div>
+            <div><h4>官方报名通道开放：2027 年度企划征集</h4><p>面向所有创作者开放选题提报，审核周期为 15 个工作日。</p></div>
+            <span class="vk-newslist__type">报名</span>
+          </div>
+        </div>
+
+        <aside class="vk-sidecard">
+          <h3>数据榜单 · 本周热度</h3>
+          <p>由社区行为综合计算，每周一更新，帮助创作者了解内容方向。</p>
+          <div class="vk-sidecard__row"><span>本周视频播放量</span><b>86.4 万</b></div>
+          <div class="vk-sidecard__row"><span>新增原创投稿</span><b>127 份</b></div>
+          <div class="vk-sidecard__row"><span>社区收藏次数</span><b>2.9 万</b></div>
+          <div class="vk-sidecard__row"><span>口碑推荐指数</span><b>9.3 / 10</b></div>
+          <form class="vk-sidecard__forms" id="vkSubscribeForm">
+            <input type="email" placeholder="留下邮箱，接收官方更新" aria-label="订阅官方更新邮箱">
+            <button class="vk-btn vk-btn--primary" type="submit">订阅更新</button>
+          </form>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ + 伙伴 -->
+  <section class="vk-section vk-section--tight" id="vkFaq">
+    <div class="vk-wrap">
+      <div class="vk-sechead">
+        <div>
+          <span class="vk-eyebrow">Help Center</span>
+          <h2 class="vk-h2">常见问题 · <em>关于品牌与社区</em></h2>
+          <p class="vk-sub">关于投稿、版权、合作与内容规范的说明，都在这里。</p>
+        </div>
+      </div>
+      <div class="vk-faq">
+        <details>
+          <summary>女王的视频vk 是什么性质的平台？</summary>
+          <p>女王的视频vk 是以人物影像与创作现场为核心的视频品牌官网，由企业团队长期运营，同时开放社区投稿与合作。平台内容以原创、正版、高清为基本标准。</p>
+        </details>
+        <details>
+          <summary>如何向平台投稿或报名参加企划？</summary>
+          <p>你可以通过页面中的“投稿与报名”入口提交基本信息与选题说明，也可以在联系信息中找到合作邮箱。编辑团队会在 15 个工作日内给出初步反馈。</p>
+        </details>
+        <details>
+          <summary>平台对作品的版权归属如何界定？</summary>
+          <p>创作者保留作品署名权与著作权，平台在获得授权的前提下进行展示与推广。所有上线内容均需完成授权确认，确保来源清晰、使用合规。</p>
+        </details>
+        <details>
+          <summary>品牌合作可以包含哪些形式？</summary>
+          <p>包含品牌纪录片、人物访谈定制、专题联合企划、影像素材授权等形式。我们更倾向与价值观一致的企业展开长期合作。</p>
+        </details>
+        <details>
+          <summary>为什么平台强调“慢制作”？</summary>
+          <p>因为我们相信理解比速度重要。前置沟通、粗剪复看与终版审校虽然耗时，但能保证表达准确、情绪克制，这是品牌品质的基础。</p>
+        </details>
+        <details>
+          <summary>观看内容需要额外条件吗？</summary>
+          <p>页面所有公开内容均可直接浏览。部分专题需登录社区账号以参与评论、收藏与报名等互动功能。</p>
+        </details>
+        <details>
+          <summary>如何反馈问题或提出建议？</summary>
+          <p>可通过页面底部的联系邮箱提交反馈，或使用卡片上的举报与反馈入口。我们会对每一条有效反馈进行记录与回复。</p>
+        </details>
+      </div>
+
+      <div class="vk-partners" aria-label="合作品牌与伙伴">
+        <span class="vk-partner">光年影像</span>
+        <span class="vk-partner">城市文化周刊</span>
+        <span class="vk-partner">南岸书店</span>
+        <span class="vk-partner">声场音乐</span>
+        <span class="vk-partner">青禾计划</span>
+        <span class="vk-partner">公共艺术中心</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="vk-section" id="vkContact">
+    <div class="vk-wrap">
+      <div class="vk-contact">
+        <div>
+          <span class="vk-eyebrow">Contact &amp; Join</span>
+          <h2>和我们一起，把值得被看见的故事拍完</h2>
+          <p>无论你是创作者、企业合作方，还是只想说一句“片子不错”，都欢迎联系我们。女王的视频vk 官方网站持续运营中，期待与你建立长期而真实的连接。</p>
+          <div class="vk-contact__actions">
+            <button class="vk-btn vk-btn--primary" type="button" data-vk-modal="submit">投稿 / 报名</button>
+            <button class="vk-btn vk-btn--ghost" type="button" data-vk-copy>复制合作邮箱</button>
+            <a class="vk-btn vk-btn--ghost" href="#vkFaq">查看帮助</a>
+          </div>
+        </div>
+        <div class="vk-contact__info">
+          <div class="vk-contact__card"><div><span>合作与投稿邮箱</span><b>hello@queen-vk.studio</b></div><i>✉</i></div>
+          <div class="vk-contact__card"><div><span>品牌与媒体联络</span><b>press@queen-vk.studio</b></div><i>◎</i></div>
+          <div class="vk-contact__card"><div><span>工作时间</span><b>周一至周五 10:00 – 19:00</b></div><i>◷</i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 页脚 -->
+<footer class="vk-footer">
+  <div class="vk-wrap">
+    <div class="vk-footer__grid">
+      <div class="vk-footer__brand">
+        <a class="vk-brand" href="#vkHome" aria-label="女王的视频vk 官方网站">
+          <span class="vk-brand__mark" aria-hidden="true"></span>
+          <span class="vk-brand__name">女王的视频vk<small>QUEEN · VIDEO PORTAL</small></span>
+        </a>
+        <p>女王的视频vk 官方网站｜以真实影像为核心的视频品牌与企业内容平台，持续运营中。平台坚持原创、正版、高清的内容标准，愿与创作者和用户共同成长。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#vkFocus">焦点内容</a></li>
+          <li><a href="#vkFeed">视频精选</a></li>
+          <li><a href="#vkTopics">专题企划</a></li>
+          <li><a href="#vkCreators">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>企业信息</h4>
+        <ul>
+          <li><a href="#vkStory">品牌故事</a></li>
+          <li><a href="#vkNews">企业动态</a></li>
+          <li><a href="#vkFaq">帮助中心</a></li>
+          <li><a href="#vkContact">联系我们</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>社区参与</h4>
+        <ul>
+          <li><a href="#vkLab">创作灵感</a></li>
+          <li><button class="vk-btn" style="border:none;padding:0;font-size:13px;font-weight:400;color:#b0a9c4" type="button" data-vk-modal="submit">投稿入口</button></li>
+          <li><button class="vk-btn" style="border:none;padding:0;font-size:13px;font-weight:400;color:#b0a9c4" type="button" data-vk-copy>分享本站</button></li>
+          <li><button class="vk-btn" style="border:none;padding:0;font-size:13px;font-weight:400;color:#b0a9c4" type="button" data-vk-modal="feedback">问题反馈</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="vk-footer__bottom">
+      <span>© 2026 女王的视频vk 官方网站 · 版权所有 · 内容未经授权请勿转载</span>
+      <span>持续运营中 · 原创内容生态 · 用户至上</span>
+    </div>
+  </div>
+</footer>
+
+<button class="vk-top" id="vkTop" type="button" aria-label="回到顶部">↑</button>
+<div class="vk-toast" id="vkToast" role="status" aria-live="polite"></div>
+
+<!-- 通用弹窗 -->
+<div class="vk-modal" id="vkModal" role="dialog" aria-modal="true" aria-labelledby="vkModalTitle">
+  <div class="vk-modal__box">
+    <button class="vk-modal__close" type="button" data-vk-close aria-label="关闭弹窗">×</button>
+    <h3 id="vkModalTitle">投稿与报名</h3>
+    <p id="vkModalDesc">请留下你的联系方式与选题方向，编辑团队会在 15 个工作日内与你联系。</p>
+    <form id="vkModalForm">
+      <div class="vk-modal__field">
+        <input type="text" name="vkName" placeholder="你的称呼或创作者昵称" required aria-label="称呼">
+        <input type="email" name="vkMail" placeholder="联系邮箱" required aria-label="邮箱">
+        <textarea name="vkMsg" placeholder="简单描述你的选题、作品或合作意向（选填）" aria-label="补充说明"></textarea>
+      </div>
+      <div class="vk-modal__foot">
+        <button class="vk-btn vk-btn--ghost" type="button" data-vk-close>取消</button>
+        <button class="vk-btn vk-btn--primary" type="submit">提交</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- 工具函数 ---------- */
+  var $ = function (sel, root) { return (root || document).querySelector(sel); };
+  var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
+
+  var toastEl = $("#vkToast");
+  var toastTimer = null;
+  function toast(msg) {
+    if (!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add("is-on");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove("is-on"); }, 2200);
+  }
+
+  /* ---------- 公告轮播 ---------- */
+  (function noticeRoll() {
+    var wrap = $("#vkNoticeRoll");
+    if (!wrap) return;
+    var items = $$(".vk-notice__item", wrap);
+    if (items.length < 2) return;
+    var i = 0;
+    setInterval(function () {
+      items[i].classList.remove("is-on");
+      i = (i + 1) % items.length;
+      items[i].classList.add("is-on");
+    }, 4200);
+  })();
+
+  /* ---------- 移动端导航 ---------- */
+  (function mobileNav() {
+    var burger = $("#vkBurger");
+    var nav = $("#vkMobileNav");
+    if (!burger || !nav) return;
+    burger.addEventListener("click", function () {
+      var open = nav.classList.toggle("is-open");
+      burger.classList.toggle("is-open", open);
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    $$("a", nav).forEach(function (a) {
+      a.addEventListener("click", function () {
+        nav.classList.remove("is-open");
+        burger.classList.remove("is-open");
+        burger.setAttribute("aria-expanded", "false");
+      });
+    });
+  })();
+
+  /* ---------- 搜索反馈 ---------- */
+  (function search() {
+    var form = $("#vkSearchForm");
+    var input = $("#vkSearchInput");
+    if (!form || !input) return;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var q = input.value.trim();
+      if (!q) {
+        toast("请输入视频、创作者或专题关键词");
+        input.focus();
+        return;
+      }
+      var hits = $$(".vk-card, .vk-mini, .vk-creator").filter(function (el) {
+        return el.textContent.indexOf(q) > -1;
+      });
+      if (hits.length) {
+        toast("找到 " + hits.length + " 条与「" + q + "」相关的内容");
+        hits[0].scrollIntoView({ behavior: "smooth", block: "center" });
+        hits.forEach(function (el) {
+          el.style.outline = "2px solid rgba(185,140,255,.65)";
+          setTimeout(function () { el.style.outline = ""; }, 1800);
+        });
+      } else {
+        toast("暂未匹配到「" + q + "」，可尝试更短的关键词");
+      }
+    });
+  })();
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  (function actions() {
+    $$("[data-vk-like]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var num = btn.querySelector("i");
+        var on = btn.classList.toggle("is-liked");
+        btn.setAttribute("aria-pressed", on ? "true" : "false");
+        if (num) {
+          var n = parseInt(num.textContent, 10) || 0;
+          num.textContent = Math.max(0, on ? n + 1 : n - 1);
+        }
+        toast(on ? "已点赞这部作品" : "已取消点赞");
+      });
+    });
+
+    $$("[data-vk-save]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var on = btn.classList.toggle("is-saved");
+        btn.setAttribute("aria-pressed", on ? "true" : "false");
+        var label = btn.querySelector("i");
+        if (label) label.textContent = on ? "已收藏" : "收藏";
+        toast(on ? "已加入你的收藏夹" : "已从收藏夹移除");
+      });
+    });
+  })();
+
+  /* ---------- 标签筛选 ---------- */
+  (function filter() {
+    var tabs = $$("[data-vk-filter]");
+    var cards = $$("#vkFeedGrid .vk-card");
+    if (!tabs.length) return;
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        tabs.forEach(function (t) {
+          t.classList.remove("is-on");
+          t.setAttribute("aria-selected", "false");
+        });
+        tab.classList.add("is-on");
+        tab.setAttribute("aria-selected", "true");
+        var key = tab.getAttribute("data-vk-filter");
+        var shown = 0;
+        cards.forEach(function (card) {
+          var ok = key === "all" || card.getAttribute("data-vk-cat") === key;
+          card.style.display = ok ? "" : "none";
+          if (ok) shown++;
+        });
+        toast("已筛选出 " + shown + " 部作品");
+      });
+    });
+  })();
+
+  /* ---------- 弹窗 ---------- */
+  (function modal() {
+    var root = $("#vkModal");
+    var title = $("#vkModalTitle");
+    var desc = $("#vkModalDesc");
+    var form = $("#vkModalForm");
+    if (!root) return;
+    var copy = {
+      submit: {
+        t: "投稿与报名",
+        d: "请留下你的联系方式与选题方向，编辑团队会在 15 个工作日内与你联系。我们尤其欢迎真实、具体、有细节的选题。"
+      },
+      feedback: {
+        t: "问题反馈",
+        d: "如果页面内容、播放体验或社区功能有问题，请留下你的说明，我们会逐条记录并跟进。"
+      }
+    };
+
+    function open(type) {
+      var cfg = copy[type] || copy.submit;
+      title.textContent = cfg.t;
+      desc.textContent = cfg.d;
+      root.classList.add("is-on");
+      document.body.style.overflow = "hidden";
+      var first = root.querySelector("input");
+      setTimeout(function () { if (first) first.focus(); }, 120);
+    }
+
+    function close() {
+      root.classList.remove("is-on");
+      document.body.style.overflow = "";
+    }
+
+    $$("[data-vk-modal]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        open(btn.getAttribute("data-vk-modal"));
+      });
+    });
+    $$("[data-vk-close]").forEach(function (btn) {
+      btn.addEventListener("click", close);
+    });
+    root.addEventListener("click", function (e) {
+      if (e.target === root) close();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && root.classList.contains("is-on")) close();
+    });
+
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        close();
+        form.reset();
+        toast("提交成功，感谢你的信任，我们会尽快联系你");
+      });
+    }
+  })();
+
+  /* ---------- 复制邮箱 / 分享 ---------- */
+  (function copyShare() {
+    var email = "hello@queen-vk.studio";
+
+    function legacyCopy(text) {
+      try {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = document.execCommand("copy");
+        document.body.removeChild(ta);
+        return ok;
+      } catch (err) {
+        return false;
+      }
+    }
+
+    function doCopy(text, okMsg) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          toast(okMsg);
+        }).catch(function () {
+          toast(legacyCopy(text) ? okMsg : "复制失败，请手动选择邮箱");
+        });
+      } else {
+        toast(legacyCopy(text) ? okMsg : "复制失败，请手动选择邮箱");
+      }
+    }
+
+    $$("[data-vk-copy]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var isShare = btn.textContent.indexOf("分享") > -1;
+        if (isShare) {
+          doCopy("女王的视频vk 官方网站 · 真实影像与创作现场", "本站信息已复制，欢迎分享给朋友");
+        } else {
+          doCopy(email, "合作邮箱已复制：" + email);
+        }
+      });
+    });
+  })();
+
+  /* ---------- 订阅 ---------- */
+  (function subscribe() {
+    var form = $("#vkSubscribeForm");
+    if (!form) return;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var input = form.querySelector("input");
+      var v = input ? input.value.trim() : "";
+      if (!v || v.indexOf("@") < 1) {
+        toast("请输入有效的邮箱地址");
+        if (input) input.focus();
+        return;
+      }
+      form.reset();
+      toast("订阅成功，官方更新将发送至你的邮箱");
+    });
+  })();
+
+  /* ---------- 数字滚动 ---------- */
+  (function counters() {
+    var nodes = $$("[data-vk-count]");
+    if (!nodes.length || !("IntersectionObserver" in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (ent) {
+        if (!ent.isIntersecting) return;
+        var el = ent.target;
+        el._done = true;
+        io.unobserve(el);
+        var target = parseInt(el.getAttribute("data-vk-count"), 10) || 0;
+        var suffix = el.querySelector("i");
+        var suffixHTML = suffix ? suffix.outerHTML : "";
+        var start = null;
+        var dur = 1100;
+        function step(ts) {
+          if (!start) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          var val = Math.round(target * eased);
+          el.innerHTML = val.toLocaleString("zh-CN") + suffixHTML;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        el.innerHTML = "0" + suffixHTML;
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.4 });
+    nodes.forEach(function (n) { io.observe(n); });
+  })();
+
+  /* ---------- 回到顶部 ---------- */
+  (function backTop() {
+    var btn = $("#vkTop");
+    if (!btn) return;
+    function onScroll() {
+      btn.classList.toggle("is-on", window.scrollY > 560);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  })();
+
+  /* ---------- 导航高亮 ---------- */
+  (function navHighlight() {
+    var links = $$(".vk-nav a");
+    if (!links.length || !("IntersectionObserver" in window)) return;
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute("href");
+      if (id && id.charAt(0) === "#") map[id.slice(1)] = a;
+    });
+    var ids = Object.keys(map);
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (ent) {
+        if (!ent.isIntersecting) return;
+        links.forEach(function (a) { a.classList.remove("is-active"); });
+        var a = map[ent.target.id];
+        if (a) a.classList.add("is-active");
+      });
+    }, { rootMargin: "-42% 0px -52% 0px", threshold: 0 });
+    ids.forEach(function (id) {
+      var sec = document.getElementById(id);
+      if (sec) io.observe(sec);
+    });
+  })();
+
+})();
+</script>
+</body>
+  </html>
